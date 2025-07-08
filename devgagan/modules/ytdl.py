@@ -90,7 +90,7 @@ async def process_audio(client, event, url, cookies_env_var=None):
             temp_cookie_path = temp_cookie_file.name
  
     start_time = time.time()
-    random_filename = f"@team_spy_pro_{event.sender_id}"
+    random_filename = f"𓍯𝙎𝙪𝙟𝙖𝙡⚝_{event.sender_id}"
     download_path = f"{random_filename}.mp3"
  
     ydl_opts = {
@@ -304,7 +304,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__Time Remaining:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__Powered by 𓍯𝙎𝙪𝙟𝙖𝙡⚝__**"
     )
  
      
