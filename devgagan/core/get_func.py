@@ -323,7 +323,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
             if chat in saved_channel_ids:
                 await app.edit_message_text(
                     message.chat.id, edit_id,
-                    "This channel is protected by **__CHOSEN ONE ⚝__💀**.\Kya Be... Humare Bot Se Humara Hi Content Nikalega 🌝 Kahi Or Try Kar 😘"
+                    "This channel is protected by **𓍯𝙎𝙪𝙟𝙖𝙡⚝**.\Kya Be... Humare Bot Se Humara Hi Content Nikalega 🌝 Kahi Or Try Kar 😘"
                 )
                 return
             
@@ -468,8 +468,8 @@ async def get_media_filename(msg):
     if msg.audio:
         return msg.audio.file_name or "Audio_By_@Src_pro_bot.mp3"
     if msg.photo:
-        return "Image_By_@Src_pro_bot.jpg"
-    return "File_By_@Src_pro_bot.dat"
+        return "Image_By_@Srcboobot.jpg"
+    return "File_By_@Srcboobot.dat"
 
 
 
@@ -493,10 +493,10 @@ async def get_final_caption(msg, sender):
     final_caption = f"{original_caption}\n\n{custom_caption}" if custom_caption else original_caption
 
     # Replace @mentions with @Real_Pirates
-    final_caption = re.sub(r'@\w+', '@II_LevelUP_II', final_caption)
+    final_caption = re.sub(r'@\w+', '𓍯𝙎𝙪𝙟𝙖𝙡⚝ ', final_caption)
 
     # Replace all links with your channel link
-    final_caption = re.sub(r'https?://\S+|www\.\S+', 'https://t.me/II_Way_to_Success_II', final_caption)
+    final_caption = re.sub(r'https?://\S+|www\.\S+', 'https://t.me/studywithsv', final_caption)
 
     # Perform additional replacements from user-defined rules
     replacements = load_replacement_words(sender)
@@ -630,7 +630,7 @@ async def send_media_message(app, target_chat_id, msg, caption, topic_id):
             # Add blockquote formatting
             caption = re.sub(
                 r'https?://t\.me/[^\s]+|https?://telegram\.me/[^\s]+',
-                'https://t.me/+7R-7p7jVoz9mM2M1',
+                'https://t.me/studywithsv',
                 caption
             )
             caption = "\n".join([f"> {line}" for line in caption.strip().splitlines()])
@@ -638,7 +638,7 @@ async def send_media_message(app, target_chat_id, msg, caption, topic_id):
         elif caption:
             caption = "\n".join([f"> {line}" for line in caption.strip().splitlines()])
         else:
-            caption = ">II_LevelUP_II"
+            caption = ">𓍯𝙎𝙪𝙟𝙖𝙡⚝ "
 
         # Send the message with the right method
         if msg.video:
@@ -678,18 +678,18 @@ def format_caption(original_caption, sender, custom_caption):
     replacements = load_replacement_words(sender)
 
     # ✅ Replace all @mentions with your bot's handle
-    original_caption = re.sub(r'@\w+', '@Chosen_Onex', original_caption)
+    original_caption = re.sub(r'@\w+', '@Lallantoop', original_caption)
 
     # ✅ Replace all URLs with your custom invite link
     original_caption = re.sub(
         r'https?://t\.me/[^\s]+|https?://telegram\.me/[^\s]+',
-        'https://t.me/+7R-7p7jVoz9mM2M1',
+        'https://t.me/studywithsv',
         original_caption
     )
     # ✅ Remove everything after 'Extracted By ...'
-    original_caption = re.sub(r'(Extracted By)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
-    original_caption = re.sub(r'(Downloaded By)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
-    original_caption = re.sub(r'(Downloaded By:)[^\n]*', r'\1 @Src_pro_bot', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Extracted By)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝ ', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Downloaded By)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝ ', original_caption, flags=re.IGNORECASE)
+    original_caption = re.sub(r'(Downloaded By:)[^\n]*', r'\1 𓍯𝙎𝙪𝙟𝙖𝙡⚝ ', original_caption, flags=re.IGNORECASE)
 
 
 
@@ -792,7 +792,7 @@ async def send_settings_message(chat_id, user_id):
         [Button.inline("🖼️ Set Thumbnail", b'setthumb'), Button.inline("🧲 Remove Thumbnail", b'remthumb')],
         [Button.inline("🗂️ PDF Wtmrk", b'pdfwt'), Button.inline("🎥 Video Wtmrk", b'watermark')],
         [Button.inline("📤 Upload Method", b'uploadmethod')],  # Include the dynamic Fast DL button
-        [Button.url("💞 Contact Owner 🦋", "https://t.me/GeniusJunctionX")]
+        [Button.url("💞 Contact Owner 🦋", "https://t.me/Lallantoop")]
     ]
 
     await gf.send_file(
@@ -852,7 +852,7 @@ async def callback_query_handler(event):
         await event.respond("📸 Send the **photo** you want to use as your custom thumbnail.")
 
     elif data == 'pdfwt':
-        await event.respond("🔒 PDF watermarking is available for **Pro+ Plan** users.\n\n👉 Contact [@GeniusJunctionX](https://t.me/GeniusJunctionX) to upgrade.")
+        await event.respond("🔒 PDF watermarking is available for **Pro+ Plan** users.\n\n👉 Contact [@studywithsv](https://t.me/GeniusJunctionX) to upgrade.")
 
 
     elif event.data == b'uploadmethod':
@@ -865,9 +865,9 @@ async def callback_query_handler(event):
         # Display the buttons for selecting the upload method
         buttons = [
             [Button.inline(f"Pyrogram v2{pyrogram_check}", b'pyrogram')],
-            [Button.inline(f"II_LevelUP_II v1 ⚡{telethon_check}", b'telethon')]
+            [Button.inline(f"𓍯𝙎𝙪𝙟𝙖𝙡⚝ v1 ⚡{telethon_check}", b'telethon')]
         ]
-        await event.edit("Choose your preferred upload method:\n\n__**Note:** **II_LevelUP_II ⚡**, built on Telethon(base), by @II_LevelUP_II still in beta.__", buttons=buttons)
+        await event.edit("Choose your preferred upload method:\n\n__**Note:** **𓍯𝙎𝙪𝙟𝙖𝙡⚝ **, built on Telethon(base), by @studywithsv still in beta.__", buttons=buttons)
 
     elif event.data == b'pyrogram':
         save_user_upload_method(user_id, "Pyrogram")
@@ -875,7 +875,7 @@ async def callback_query_handler(event):
 
     elif event.data == b'telethon':
         save_user_upload_method(user_id, "Telethon")
-        await event.edit("Upload method set to **II_LevelUP_II ⚡\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
+        await event.edit("Upload method set to **𓍯𝙎𝙪𝙟𝙖𝙡⚝ ⚡\n\nThanks for choosing this library as it will help me to analyze the error raise issues on github.** ✅")        
         
     elif event.data == b'reset':
         try:
@@ -1076,7 +1076,7 @@ async def handle_large_file(file, sender, edit, caption):
         if freecheck == 1:
             reply_markup = InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/GeniusJunctionX")]
+                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/studywithsv")]
                 ]
             )
             await app.copy_message(
@@ -1250,7 +1250,7 @@ def progress_callback(done, total, user_id):
     # Format the final output as needed
     final = (
         f"╭──────────────────╮\n"
-        f"│     **__II_LevelUP_II ⚡ Uploader__**       \n"
+        f"│     ** 𓍯𝙎𝙪𝙟𝙖𝙡⚝ Uploader__**       \n"
         f"├──────────\n"
         f"│ {progress_bar}\n\n"
         f"│ **__Progress:__** {percent:.2f}%\n"
@@ -1258,7 +1258,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Pwrd by CHOSEN ONE ⚝__**"
+        f"**__Pwrd by 𓍯𝙎𝙪𝙟𝙖𝙡⚝__**"
     )
     
     # Update tracking variables for the user
@@ -1313,7 +1313,7 @@ def dl_progress_callback(done, total, user_id):
     # Format the final output as needed
     final = (
         f"╭──────────────────╮\n"
-        f"│     **__II_LevelUP_II ⚡ Downloader__**       \n"
+        f"│     ** 𓍯𝙎𝙪𝙟𝙖𝙡⚝ Downloader__**       \n"
         f"├──────────\n"
         f"│ {progress_bar}\n\n"
         f"│ **__Progress:__** {percent:.2f}%\n"
@@ -1321,7 +1321,7 @@ def dl_progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Pwrd by CHOSEN ONE ⚝__**"
+        f"**__Pwrd by 𓍯𝙎𝙪𝙟𝙖𝙡⚝__**"
     )
     
     # Update tracking variables for the user
