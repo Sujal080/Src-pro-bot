@@ -39,14 +39,14 @@ async def subscribe(app, message):
       try:
          user = await app.get_chat_member(update_channel, message.from_user.id)
          if user.status == "kicked":
-            await message.reply_text("You are Banned. Contact -- @CHOSEN_ONEx_bot")
+            await message.reply_text("You are Banned. Contact -- @Sujalchavdaa")
             return 1
       except UserNotParticipant:
         caption = f"**Join our channel to use the bot 😉\nAfter Join... /start Again**"
         await message.reply_photo(photo="https://postimg.cc/K133r7Vf",caption=caption, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Join Now...", url=f"{url}")]]))
         return 1
       except Exception:
-         await message.reply_text("Something Went Wrong. Contact us @CHOSEN_ONEx_bot ...")
+         await message.reply_text("Something Went Wrong. Contact us @Sujalchavdaa ...")
          return 1
 async def get_seconds(time_string):
     def extract_value_and_unit(ts):
